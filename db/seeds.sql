@@ -1,0 +1,1 @@
+INSERT INTO `burgers` (`burger_name`) VALUES ('The Mother Burger'), ('Buck Nekid'), ('The Custom Burger');

@@ -1,0 +1,28 @@
+{
+  "name": "burger",
+  "version": "2.0.5",
+  "description": "A multi-million dollar burger app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtaveras824/burger.git"
+  },
+  "keywords": [
+    "Burger"
+  ],
+  "author": "Reuben",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rtaveras824/burger/issues"
+  },
+  "homepage": "https://github.com/rtaveras824/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6"
+  }
+}
