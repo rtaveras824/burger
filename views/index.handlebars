@@ -2,10 +2,15 @@
 
 <h2>Burgers not devoured yet</h2>
 
+
+
+<object type="image/svg+xml" id="vivusMe" data="../assets/img/Burger_outline.svg" width="200" height="200"></object>
+{{{permalink}}}
 <ul>
 	{{#each burgers}}
 		{{#unless this.devoured}}
 			<li>
+				<img src="../assets/img/Burger_color.svg" alt="Burger Image" width="100" height="100">
 				{{this.id}}
 				{{this.burger_name}}
 				{{> update-burger}}

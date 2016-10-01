@@ -5,5 +5,12 @@
 	</head>
 	<body>
 		{{{ body }}}
+		<script src="../assets/js/vivus.min.js"></script>
+		<script type="text/javascript">
+			new Vivus('vivusMe', {duration: 5000}, myCallback);
+			function myCallback() {
+				console.log('done'); 	
+			}
+		</script>
 	</body>
 </html>
