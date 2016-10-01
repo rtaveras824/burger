@@ -17,7 +17,7 @@ var objToSql = (ob) => {
 
 	for (var key in ob) {
 		if (ob.hasOwnProperty(key)) {
-			arr.push(`${key} = ${connection.escape(ob[key])}`);
+			arr.push(`${key} = ${ob[key]}`);
 		}
 	}
 
@@ -27,10 +27,9 @@ var objToSql = (ob) => {
 class Orm {
 
 	selectAll (table, cb) {
-		var queryString = `SELECT * FROM ${table};`
+		var queryString = `SELECT * FROM ${table} ORDER BY id ASC`
 		connection.query(queryString, (err, results) => {
 			if (err) throw err;
-			console.log(results);
 			cb(results);
 		});
 	}
@@ -44,15 +43,23 @@ class Orm {
 		});
 	}
 
-	updateOne (table, objColVals, value, cb) {
+	updateOne (table, objColVals, condition, cb) {
 		var queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
 		console.log(queryString);
-		connection.query(queryString, value, (err, results) => {
+		connection.query(queryString, (err, results) => {
 			if (err) throw err;
-			cb(results)
+			cb(results);
 		});
 	}
-	
+
+	deleteOne (table, condition, cb) {
+		var queryString = `DELETE FROM ${table} WHERE ${condition}`;
+		connection.query(queryString, (err, results) => {
+			if (err) throw err;
+			cb(results);
+		});
+	}
+
 }
 
 module.exports = Orm;
