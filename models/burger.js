@@ -1,8 +1,8 @@
 "use strict";
 
-var Orm = require('../config/orm.js');
+const Orm = require('../config/orm.js');
 
-var orm = new Orm;
+const orm = new Orm;
 
 class Burger {
 

@@ -1,10 +1,10 @@
 "use strict";
 
-var express = require('express');
-var router = express.Router();
-var Burger = require('../models/burger.js');
+const express = require('express');
+const router = express.Router();
+const Burger = require('../models/burger.js');
 
-var burger = new Burger;
+const burger = new Burger;
 
 router.get('/', (req, res) => {
 	burger.all((data) => {
@@ -23,7 +23,8 @@ router.post('/create', (req, res) => {
 
 router.put('/update/:id', (req, res) => {
 	var id = req.params.id;
-	burger.update({ devoured: true }, 'id = ' + id, () => {
+	var devoured = req.body.devoured;
+	burger.update({ devoured: devoured }, 'id = ' + id, () => {
 		res.redirect('/');
 	});
 });

@@ -1,8 +1,8 @@
 "use strict";
 
-var connection = require('./connection.js');
+const connection = require('./connection.js');
 
-var printQuestionMarks  = (num) => {
+const printQuestionMarks  = (num) => {
 	var arr = [];
 
 	for (var i = 0; i < num; i++) {
@@ -12,7 +12,7 @@ var printQuestionMarks  = (num) => {
 	return arr.toString();
 }
 
-var objToSql = (ob) => {
+const objToSql = (ob) => {
 	var arr = [];
 
 	for (var key in ob) {
