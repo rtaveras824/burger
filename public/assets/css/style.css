@@ -82,7 +82,7 @@ h3 {
 
 section {
 	text-align: center;
-	width: 33%;
+	width: calc(100% / 3);
 	min-height: 500px;
 	float: left;
 }
