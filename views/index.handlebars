@@ -2,36 +2,39 @@
 
 <h2>Burgers not devoured yet</h2>
 
+<section class="uneaten_burgers">
+	<ul>
+		{{#each burgers}}
+			{{#unless this.devoured}}
+				<li>
+					<img src="../assets/img/Burger_color.svg" alt="Burger Image" width="100" height="100">
+					{{this.id}}
+					{{this.burger_name}}
+					{{> update-burger}}
+				</li>
+			{{/unless}}
+		{{/each}}
+	</ul>
+</section>
 
+<section class="add_burger">
+	<h2>Enter a burger</h2>
+	{{> add-burger}}
+</section>
 
-<object type="image/svg+xml" id="vivusMe" data="../assets/img/Burger_outline.svg" width="200" height="200"></object>
-{{{permalink}}}
-<ul>
-	{{#each burgers}}
-		{{#unless this.devoured}}
-			<li>
-				<img src="../assets/img/Burger_color.svg" alt="Burger Image" width="100" height="100">
-				{{this.id}}
-				{{this.burger_name}}
-				{{> update-burger}}
-			</li>
-		{{/unless}}
-	{{/each}}
-</ul>
+<section class="eaten_burgers">
+	<h2>Burgers devoured</h2>
 
-<h2>Burgers devoured</h2>
+	<ul>
+		{{#each burgers}}
+			{{#if this.devoured}}
+				<li>
+					{{this.id}}
+					{{this.burger_name}}
+					{{> delete-burger}}
+				</li>
+			{{/if}}
+		{{/each}}
+	</ul>
+</section>
 
-<ul>
-	{{#each burgers}}
-		{{#if this.devoured}}
-			<li>
-				{{this.id}}
-				{{this.burger_name}}
-				{{> delete-burger}}
-			</li>
-		{{/if}}
-	{{/each}}
-</ul>
-
-<h2>Enter a burger</h2>
-{{> add-burger}}

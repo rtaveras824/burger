@@ -3,8 +3,61 @@
 	<head>
 		<title>Burgers</title>
 	</head>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+
+	
+
 	<body>
-		{{{ body }}}
+
+		<div class="container">
+			
+			<header>
+
+				<div id="logosection" class="clipsection">
+
+					<svg width="0" height="0">
+						<defs>
+							<clipPath id="clip-shape" clipPathUnits="objectBoundingBox">
+								<polygon points="0 0, 1 0, 1 .7, .5 1, 0 .7" />
+							</clipPath>
+						</defs>
+					</svg>
+
+					<div class="svg-container">
+						<object type="image/svg+xml" id="vivusMe" data="assets/img/Burger_outline.svg" width="200" height="200"></object>
+					</div>
+					
+				</div>
+
+				<div id="videosection">
+					<div class="header-container">
+						<div class="video-container clipsection">
+							<video preload="true" autoplay loop volume="0" poster="pic.jpg">
+
+							<source src="assets/video/Burger_video.mp4" type="video/mp4">
+								
+							</video>
+						</div>
+						<h3>I'm so sorry for making this website</h3>
+					</div>
+				</div>
+
+				
+
+			</header>
+
+			<div class="body-container">
+				{{{ body }}}
+			</div>
+
+			<footer>
+				
+			</footer>
+
+		</div>
+		
 		<script src="../assets/js/vivus.min.js"></script>
 		<script type="text/javascript">
 			new Vivus('vivusMe', {duration: 5000}, myCallback);
@@ -12,5 +65,6 @@
 				console.log('done'); 	
 			}
 		</script>
+
 	</body>
 </html>

@@ -1,0 +1,127 @@
+body {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f45c04+0,ffbf7f+100 */
+	background: #f45c04; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f45c04 0%, #ffbf7f 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f45c04 0%,#ffbf7f 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f45c04 0%,#ffbf7f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f45c04', endColorstr='#ffbf7f',GradientType=0 ); /* IE6-9 */
+
+	font-family: Courier, serif;
+}
+
+#logosection {
+	width: 100%;
+	height: 300px;
+	background: red;
+	position: relative;
+	z-index: 1;
+}
+
+.clipsection {
+	transition: 0.4s cubic-bezier(1, -1, 0, 2);
+	-webkit-clip-path: url("#clip-shape");
+	clip-path: url("#clip-shape");
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+	clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+
+/*#logosection:hover {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+}*/
+
+.svg-container {
+	max-width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 50%;
+	background: white;
+}
+
+.svg-container>object {
+	margin-top: calc(50% - 100px);
+}
+
+.header-container {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	padding: 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+video {
+	position: relative;
+	z-index: -1;
+	opacity: 0.78;
+	width: 100%;
+}
+
+h3 {
+	position:relative;
+	z-index: 1;
+	text-align: center;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+.body-container {
+	/*position: relative;
+	top: -100px;*/
+	height: 100%;
+}
+
+section {
+	text-align: center;
+	height: 100%;
+}
+
+li {
+	width: 90%;
+	background: blue;
+}
+
+li>img {
+	float: left;
+}
+
+.uneaten_burgers {
+	width: 33%;
+	float: left;
+	background: maroon;
+}
+
+.add_burger {
+	width: 33%;
+	float: left;
+	background: olive;
+}
+
+.eaten_burgers {
+	width: 33%;
+	float: left;
+	background: navy;
+}
+
+button {
+	padding: 20px;
+	border-radius: 5px;
+	background-color: black;
+	border-style: none;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+	transition: background-color .3s ease-out;
+
+	font-family: Roboto, sans-serif;
+}
+
+button:hover {
+	background-color: gray;
+}
